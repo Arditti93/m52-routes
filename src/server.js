@@ -36,6 +36,37 @@ app.get("/getBooks", async (req, res) => {
     res.status(200).json(successResponse)
 })
 
+
+//Task 1
+// Create a route to update an author for a book on the database
+
+app.put("/updateBook", async (req, res) => {
+    // https://mongoosejs.com/docs/api/model.html#Model.updateOne()
+    const updateAuthor = await Book //
+
+    const successResponse = {
+        message: "Sucess all books found",
+        book: updateAuthor
+    }
+    res.status(200).json(successResponse)
+
+})
+
+
+// Task 2 
+// Create a route to delete a book on the database
+// https://mongoosejs.com/docs/api/model.html#Model.deleteOne()
+
+// Task 3 
+// Create a route to find one book on the database using the title
+// https://mongoosejs.com/docs/api/model.html#Model.findOne()
+
+//Task 4
+// Create a route to add 2 books at once on the database
+
+// Task 5 - Stretch Goal
+// Create a route to dybamically update any feild on the databse
+
 app.listen(port, () => {
     console.log(`Server is running on ${port}`)
 })
