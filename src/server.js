@@ -25,7 +25,7 @@ app.post("/addBook", async (req, res) => {
     res.status(201).json(successResponse)
 })
 
-
+// READ
 app.get("/getBooks", async (req, res) => {
     const getAllBooks = await Book.find({}) // get all books from our collection.
     
@@ -59,13 +59,14 @@ app.put("/updateBook", async (req, res) => {
 
 // Task 3 
 // Create a route to find one book on the database using the title
+// req.params
 // https://mongoosejs.com/docs/api/model.html#Model.findOne()
 
 //Task 4
 // Create a route to add 2 books at once on the database
 
 // Task 5 - Stretch Goal
-// Create a route to dybamically update any feild on the databse
+// Create a route to dynamically update any feild on the databse
 
 app.listen(port, () => {
     console.log(`Server is running on ${port}`)
